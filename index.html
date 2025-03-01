@@ -1,0 +1,1053 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lalit's Academy - Premium YouTube Courses & Muth Academy. $ponsered by kejrival</title>
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: #ff0000; /* YouTube red */
+            color: white;
+            padding: 1rem 0;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .container {
+            width: 85%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 20px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #f1f1f1;
+        }
+
+        .cta-button {
+            background-color: white;
+            color: #ff0000;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 4px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .cta-button:hover {
+            background-color: #f1f1f1;
+            transform: translateY(-2px);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://source.unsplash.com/1600x900/?youtube,education');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 120px 0;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .btn {
+            padding: 12px 24px;
+            border-radius: 4px;
+            font-weight: bold;  
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        .btn-primary {
+            background-color: #ff0000;
+            color: white;
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Features Section */
+        .features {
+            padding: 80px 0;
+            background-color: white;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+            font-size: 2.2rem;
+            color: #333;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .feature-card {
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            color: #ff0000;
+            margin-bottom: 15px;
+        }
+
+        .feature-card h3 {
+            margin-bottom: 15px;
+            font-size: 1.4rem;
+        }
+
+        /* Courses Section */
+        .courses {
+            padding: 80px 0;
+            background-color: #f8f9fa;
+        }
+
+        .courses-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .course-card {
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s;
+        }
+
+        .course-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .course-image {
+            height: 200px;
+            overflow: hidden;
+        }
+
+        .course-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+
+        .course-card:hover .course-image img {
+            transform: scale(1.1);
+        }
+
+        .course-details {
+            padding: 20px;
+        }
+
+        .course-details h3 {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+        }
+
+        .course-meta {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+            color: #777;
+            font-size: 0.9rem;
+        }
+
+        .course-description {
+            margin-bottom: 20px;
+            color: #555;
+        }
+
+        .course-price {
+            font-size: 1.4rem;
+            font-weight: bold;
+            color: #ff0000;
+            margin-bottom: 15px;
+        }
+
+        .course-btn {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            text-align: center;
+            background-color: #ff0000;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        .course-btn:hover {
+            background-color: #cc0000;
+        }
+
+        /* Testimonials */
+        .testimonials {
+            padding: 80px 0;
+            background-color: white;
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .testimonial-card {
+            background-color: #f9f9f9;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+            position: relative;
+        }
+
+        .quote {
+            font-size: 4rem;
+            color: rgba(255, 0, 0, 0.1);
+            position: absolute;
+            top: 10px;
+            left: 10px;
+        }
+
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+        }
+
+        .author-image {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            margin-right: 15px;
+            overflow: hidden;
+        }
+
+        .author-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .author-details h4 {
+            margin-bottom: 5px;
+            font-size: 1.1rem;
+        }
+
+        .author-details p {
+            color: #777;
+            font-size: 0.9rem;
+        }
+
+        /* CTA Section */
+        .cta {
+            background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('https://source.unsplash.com/1600x900/?classroom');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 80px 0;
+        }
+
+        .cta h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .cta p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 30px;
+        }
+        
+        .highlight {
+            color: #ff0000;
+            font-weight: bold;
+        }
+        
+        .cta-stats-banner {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin: 30px 0;
+        }
+        
+        .cta-expanded-content {
+            margin: 40px auto;
+            max-width: 900px;
+        }
+        
+        .cta-benefits {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .cta-benefit-item {
+            display: flex;
+            align-items: flex-start;
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 8px;
+        }
+        
+        .benefit-icon {
+            font-size: 2rem;
+            margin-right: 15px;
+        }
+        
+        .cta-testimonial-highlight {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 25px;
+            border-radius: 8px;
+            margin: 30px 0;
+        }
+        
+        .highlight-quote {
+            font-style: italic;
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+        }
+        
+        .highlight-author {
+            display: flex;
+            align-items: center;
+        }
+        
+        .highlight-author img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 15px;
+        }
+        
+        .cta-stats {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin: 30px 0;
+        }
+        
+        .stat-item {
+            text-align: center;
+            padding: 15px;
+        }
+        
+        .stat-number {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #ff0000;
+            display: block;
+        }
+        
+        .stat-label {
+            font-size: 0.9rem;
+        }
+        
+        .cta-guarantee {
+            display: flex;
+            align-items: center;
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 8px;
+            margin: 30px 0;
+        }
+        
+        .guarantee-icon {
+            font-size: 2rem;
+            margin-right: 15px;
+        }
+        
+        .cta-limited-offer {
+            background-color: rgba(255, 0, 0, 0.2);
+            border: 2px solid #ff0000;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 30px 0;
+            position: relative;
+        }
+        
+        .offer-badge {
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #ff0000;
+            padding: 5px 15px;
+            border-radius: 30px;
+            font-weight: bold;
+        }
+        
+        .countdown-timer {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 15px;
+        }
+        
+        .countdown-item {
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 10px;
+            border-radius: 5px;
+            min-width: 60px;
+        }
+        
+        .countdown-number {
+            font-size: 1.5rem;
+            font-weight: bold;
+            display: block;
+        }
+        
+        .cta-buttons-container {
+            margin: 30px 0;
+        }
+        
+        .btn-large {
+            padding: 15px 30px;
+            font-size: 1.1rem;
+        }
+        
+        .cta-faq {
+            margin: 50px auto;
+            max-width: 800px;
+            text-align: left;
+        }
+        
+        .faq-title {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 1.8rem;
+        }
+        
+        .faq-item {
+            margin-bottom: 20px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            padding: 20px;
+        }
+        
+        .faq-question {
+            font-weight: bold;
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+        }
+        
+        .cta-final {
+            margin: 40px 0 20px;
+        }
+        
+        .pulse-button {
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        /* Footer */
+        footer {
+            background-color: #222;
+            color: white;
+            padding: 50px 0 20px;
+        }
+
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 30px;
+        }
+
+        .footer-column h3 {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .footer-column h3:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            height: 2px;
+            background-color: #ff0000;
+        }
+
+        .footer-column ul {
+            list-style: none;
+        }
+
+        .footer-column ul li {
+            margin-bottom: 8px;
+        }
+
+        .footer-column a {
+            color: #ccc;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-column a:hover {
+            color: white;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: #333;
+            color: white;
+            transition: all 0.3s;
+        }
+
+        .social-links a:hover {
+            background-color: #ff0000;
+            transform: translateY(-3px);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 20px;
+            text-align: center;
+            font-size: 0.9rem;
+            color: #999;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .section-title {
+                font-size: 1.8rem;
+            }
+        }
+
+        /* Add this to your existing CSS in the head section */
+        .profile-image {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            margin-right: 10px;
+            object-fit: cover;
+            border: 2px solid white;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo-container">
+                    <img src="lulli.jpg" alt="Lalit" class="profile-image">
+                    <div class="logo">Lalit's Academy</div>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#courses">Courses</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <button class="cta-button">Login / Register</button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Unlock Your YouTube Content Creation Potential</h1>
+            <p>Learn from Lalit's premium courses and transform your YouTube channel into a successful business. Muth Academy $ponsered by kejrival</p>
+            <div class="hero-buttons">
+                <a href="#courses" class="btn btn-primary">Explore Courses</a>
+                <a href="#about" class="btn btn-secondary">Learn More</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="about">
+        <div class="container">
+            <h2 class="section-title">Why Choose Lalit's Academy?</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🎓</div>
+                    <h3>Expert Instruction</h3>
+                    <p>Learn from a successful YouTube creator with proven strategies and techniques</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🚀</div>
+                    <h3>Accelerated Growth</h3>
+                    <p>Apply tested methods to grow your channel faster than through trial and error</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">💰</div>
+                    <h3>Monetization Strategies</h3>
+                    <p>Discover multiple revenue streams to maximize your YouTube income</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎯</div>
+                    <h3>Targeted Audience Building</h3>
+                    <p>Learn how to attract and retain the right viewers for your content</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎬</div>
+                    <h3>Content Optimization</h3>
+                    <p>Master the art of creating content that performs well with the YouTube algorithm</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🤝</div>
+                    <h3>Community Support</h>
+                    <p>Join a community of like-minded creators for networking and collaboration</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Courses Section -->
+    <section class="courses" id="courses">
+        <div class="container">
+            <h2 class="section-title">Premium YouTube Courses</h2>
+            <div class="courses-grid">
+                <div class="course-card">
+                    <div class="course-image">
+                        <img src="https://source.unsplash.com/random/600x400/?youtube" alt="YouTube Beginners Course">
+                    </div>
+                    <div class="course-details">
+                        <h3>YouTube Mastery: Beginners to Pro</h3>
+                        <div class="course-meta">
+                            <span>48 Lessons</span>
+                            <span>12 Hours</span>
+                        </div>
+                        <div class="course-description">
+                            A comprehensive guide to starting and growing your YouTube channel from scratch.
+                        </div>
+                        <div class="course-price">
+                            $149.99
+                        </div>
+                        <a href="#" class="course-btn">Enroll Now</a>
+                    </div>
+                </div>
+                <div class="course-card">
+                    <div class="course-image">
+                        <img src="https://source.unsplash.com/random/600x400/?editing" alt="Video Editing Course">
+                    </div>
+                    <div class="course-details">
+                        <h3>Advanced Video Editing Techniques</h3>
+                        <div class="course-meta">
+                            <span>36 Lessons</span>
+                            <span>10 Hours</span>
+                        </div>
+                        <div class="course-description">
+                            Master professional editing skills to create high-quality, engaging YouTube videos.
+                        </div>
+                        <div class="course-price">
+                            $129.99
+                        </div>
+                        <a href="#" class="course-btn">Enroll Now</a>
+                    </div>
+                </div>
+                <div class="course-card">
+                    <div class="course-image">
+                        <img src="https://source.unsplash.com/random/600x400/?marketing" alt="YouTube Marketing Course">
+                    </div>
+                    <div class="course-details">
+                        <h3>YouTube SEO & Marketing</h3>
+                        <div class="course-meta">
+                            <span>32 Lessons</span>
+                            <span>8 Hours</span>
+                        </div>
+                        <div class="course-description">
+                            Learn how to optimize your content for discovery and implement effective marketing strategies.
+                        </div>
+                        <div class="course-price">
+                            $119.99
+                        </div>
+                        <a href="#" class="course-btn">Enroll Now</a>
+                    </div>
+                </div>
+                <div class="course-card">
+                    <div class="course-image">
+                        <img src="https://source.unsplash.com/random/600x400/?money" alt="YouTube Monetization Course">
+                    </div>
+                    <div class="course-details">
+                        <h3>YouTube Monetization Blueprint</h3>
+                        <div class="course-meta">
+                            <span>28 Lessons</span>
+                            <span>7 Hours</span>
+                        </div>
+                        <div class="course-description">
+                            Discover all the ways to monetize your YouTube channel and maximize your revenue.
+                        </div>
+                        <div class="course-price">
+                            $99.99
+                        </div>
+                        <a href="#" class="course-btn">Enroll Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+<!-- Testimonials Section -->
+<section class="testimonials" id="testimonials">
+    <div class="container">
+        <h2 class="section-title">What Our Students Say</h2>
+        <div class="testimonials-grid">
+            <div class="testimonial-card">
+                <div class="quote">"</div>
+                <p class="testimonial-text">Lalit's YouTube Mastery course completely changed my approach to content creation. I went from 100 to 10,000 subscribers in just 3 months by applying his strategies!</p>
+                <div class="testimonial-author">
+                    <div class="author-image">
+                        <!-- In a real implementation, you would save this image to your server and reference it -->
+                        <img src="arvind-kejriwal.jpg" alt="Arvind Kejriwal">
+                        <!-- If you're using a CDN or external hosting, you would use that URL instead -->
+                    </div>
+                    <div class="author-details">
+                        <h4>Arvind Kejriwal</h4>
+                        <p>Tech YouTuber</p>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <div class="quote">"</div>
+                <p class="testimonial-text">The Advanced Video Editing course taught me skills that made my videos stand out from the competition. My engagement rate has increased by 200% since implementing these techniques.</p>
+                <div class="testimonial-author">
+                    <div class="author-image">
+                        <img src="narendra-modi.jpg" alt="Narendra Modi">
+                    </div>
+                    <div class="author-details">
+                        <h4>Narendra Modi</h4>
+                        <p>Travel Vlogger</p>
+                    </div>
+                </div>
+            </div>
+            <div class="cta-testimonial-highlight">
+                <div class="highlight-quote">"Within 90 days of implementing Lalit's strategies, my channel went from making $200/month to over $4,000/month. The ROI on these courses is incredible!"</div>
+                <div class="highlight-author">
+                    <img src="rahul-modi.jpg" alt="Rahul Gandhi">
+                    <div>
+                        <strong>Rahul Gandhi</strong>
+                        <span>Technology Reviewer</span>
+                    </div>
+                </div>
+            </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Call to Action -->
+    <section class="cta">
+        <div class="container">
+            <h2>Ready to Transform Your YouTube Career?</h2>
+            <p class="cta-description">Join thousands of successful creators who've elevated their channels with Lalit's expert guidance. Our proven methodology has helped content creators achieve <span class="highlight">500%+ growth</span> in views, subscribers, and revenue within months.</p>
+
+            <div class="cta-stats-banner">
+                <div class="stat-item">
+                    <span class="stat-number">10,000+</span>
+                    <span class="stat-label">Students</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">97%</span>
+                    <span class="stat-label">Success Rate</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">4.9/5</span>
+                    <span class="stat-label">Rating</span>
+                </div>
+            </div>
+            
+            <div class="cta-expanded-content">
+                <div class="cta-benefits">
+                    <div class="cta-benefit-item">
+                        <div class="benefit-icon">📈</div>
+                        <div class="benefit-content">
+                            <h3>Exponential Growth</h3>
+                            <p>Our students see an average of 250% increase in subscribers within the first 6 months</p>
+                        </div>
+                    </div>
+                    <div class="cta-benefit-item">
+                        <div class="benefit-icon">💰</div>
+                        <div class="benefit-content">
+                            <h3>Income Potential</h3>
+                            <p>Learn how to earn $5,000+ monthly through strategic content and multiple revenue streams</p>
+                        </div>
+                    </div>
+                    <div class="cta-benefit-item">
+                        <div class="benefit-icon">🏆</div>
+                        <div class="benefit-content">
+                            <h3>Industry Recognition</h3>
+                            <p>Gain the skills to stand out in a competitive landscape and become an authority</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="cta-testimonial-highlight">
+                    <div class="highlight-quote">"Within 90 days of implementing Lalit's strategies, my channel went from making $200/month to over $4,000/month. The ROI on these courses is incredible!"</div>
+                    <div class="highlight-author">
+                        <img src="https://randomuser.me/api/portraits/men/22.jpg" alt="Vikram Singh">
+                        <div>
+                            <strong>Vikram Singh</strong>
+                            <span>Technology Reviewer</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="cta-stats">
+                    <div class="stat-item">
+                        <div class="stat-number">10,000+</div>
+                        <div class="stat-label">Students</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">95%</div>
+                        <div class="stat-label">Success Rate</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">4.9/5</div>
+                        <div class="stat-label">Average Rating</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">60M+</div>
+                        <div class="stat-label">Combined Subscriber Growth</div>
+                    </div>
+                </div>
+                
+                <div class="cta-guarantee">
+                    <div class="guarantee-icon">✅</div>
+                    <div class="guarantee-content">
+                        <h3>30-Day Money-Back Guarantee</h3>
+                        <p>If you don't see results within 30 days of implementing our strategies, we'll refund your investment. No questions asked.</p>
+                    </div>
+                </div>
+                
+                <div class="cta-limited-offer">
+                    <div class="offer-badge">Limited Time Offer</div>
+                    <div class="offer-details">
+                        <h3>Special Launch Pricing</h3>
+                        <p>Save 40% on all courses when you enroll before June 30th</p>
+                        <div class="countdown-timer">
+                            <div class="countdown-item">
+                                <span class="countdown-number">14</span>
+                                <span class="countdown-label">Days</span>
+                            </div>
+                            <div class="countdown-item">
+                                <span class="countdown-number">22</span>
+                                <span class="countdown-label">Hours</span>
+                            </div>
+                            <div class="countdown-item">
+                                <span class="countdown-number">45</span>
+                                <span class="countdown-label">Minutes</span>
+                            </div>
+                            <div class="countdown-item">
+                                <span class="countdown-number">30</span>
+                                <span class="countdown-label">Seconds</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="cta-buttons-container">
+                <a href="#courses" class="btn btn-primary btn-large">Get Started Today</a>
+                <a href="#contact" class="btn btn-secondary btn-large">Schedule a Free Consultation</a>
+            </div>
+            
+            <div class="cta-faq">
+                <h3 class="faq-title">Frequently Asked Questions</h3>
+                <div class="faq-item">
+                    <div class="faq-question">How soon will I see results?</div>
+                    <div class="faq-answer">Most students begin seeing measurable improvements in their channel metrics within the first 4 weeks of implementing our strategies. However, significant growth typically occurs around the 3-month mark when the compound effect of our methods takes full effect.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">Do I need existing subscribers to benefit from these courses?</div>
+                    <div class="faq-answer">Not at all! Our courses are designed for creators at every stage. Whether you're just starting with 0 subscribers or already have thousands, our techniques can be tailored to accelerate growth from your current position.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">Do you offer payment plans?</div>
+                    <div class="faq-answer">Yes, we understand that investing in your YouTube career is significant. We offer 3, 6, and 12-month payment plans to make our courses accessible to serious creators at all budget levels.</div>
+                </div>
+            </div>
+            
+            <div class="cta-final">
+                <h3>Don't Wait to Build Your YouTube Success</h3>
+                <p>The best time to optimize your channel was a year ago. The second best time is today.</p>
+                <a href="#courses" class="btn btn-primary pulse-button">Transform Your Channel Now</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-column">
+                    <h3>Lalit's Academy</h3>
+                    <p>Premium YouTube courses to help you grow your channel, increase your audience, and maximize your revenue.</p>
+                    <div class="social-links">
+                        <a href="#"><i>fb</i></a>
+                        <a href="#"><i>tw</i></a>
+                        <a href="#"><i>ig</i></a>
+                        <a href="#"><i>yt</i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#courses">Courses</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#testimonials">Testimonials</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Support</h3>
+                    <ul>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact</h3>
+                    <ul>
+                        <li>Email: info@lalitacademy.com</li>
+                        <li>Phone: +91 98765 43210</li>
+                        <li>Address: 123 Creator Street, Mumbai, India</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Lalit's Academy. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
